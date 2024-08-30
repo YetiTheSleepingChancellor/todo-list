@@ -3,11 +3,11 @@ const addTaskBtn = document.getElementById('add-task-btn');
 const taskList = document.getElementById('task-list');
 
 function addTask() {
-    const taskText = taskInput.ariaValueMax;
+    const taskText = taskInput.value;
 
     if (taskText != '') {
         const li = document.createElement('li');
-        li.textContent =textText;
+        li.textContent =taskText;
 
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
@@ -30,7 +30,7 @@ function addTask() {
 addTaskBtn.addEventListener('click', addTask);
 
 taskInput.addEventListener('keypress', function(event) {
-    if(event.key === 'Emter') {
+    if(event.key === 'Enter') {
         addTask(); 
     }
 })
